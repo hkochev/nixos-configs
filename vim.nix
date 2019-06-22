@@ -64,10 +64,11 @@ vim_configurable.customize {
         " HLint integration settings
         let g:syntastic_haskell_checkers = ['hlint']
         " Hdevtools settings
-        au FileType haskell nnorremap <buffer> <F1> :HdevtoolsType<CR>
-        au FileType haskell nnorremap <buffer> <silent> <F2> :HdevtoolsInfo<CR>
-        au FileType haskell nnorremap <buffer> <silent> <F3> :HdevtoolsClear<CR>
-
+        "        au FileType haskell nnorremap <buffer> <F1> :HdevtoolsType<CR>
+        "        au FileType haskell nnorremap <buffer> <silent> <F2> :HdevtoolsInfo<CR>
+        "        au FileType haskell nnorremap <buffer> <silent> <F3> :HdevtoolsClear<CR>
+        " Elixir mix fomrater option
+        set formatprg=mix\ format\ 
     '';
     # Use the default plugin list shipped with nixpkgs
     vimrcConfig.vam.knownPlugins = pkgs.vimPlugins;
@@ -95,6 +96,7 @@ vim_configurable.customize {
             "vim-hdevtools"
             "vim-stylishask"
             "vim-elixir"
+            # "vim-mix-format"
         ]; }
       ];
     }

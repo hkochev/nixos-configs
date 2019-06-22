@@ -1,0 +1,1 @@
+/etc/nixos/locals.nix
