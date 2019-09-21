@@ -7,12 +7,23 @@ haskellPackages:
                    # pretty-show
                    # temporary 
                    
-                   # tools
-                   cabal-install 
-                   doctest hlint 
+                   # cabal
+                   cabal-install
+                   cabal2nix
+
+                   # test && linters
+                   doctest 
+                   hlint 
                    stylish-haskell 
+                   # tools
                    hpack 
-                   hdevtools 
+                   hdevtools
+                   ghcid
                    # ghc-mod  
+                  
+                   # tools
+                   stack
+                   # stack2nix
+ 
                  ]);
 }

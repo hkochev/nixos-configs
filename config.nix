@@ -1,7 +1,7 @@
 pkgs : {
   allowUnfree = true;
   # ignoreCollisions = true;
-  # allowBroken = true;
+  allowBroken = true;
   firefox.enableGoogleTalkPlugin = true;
   firefox.enableEsteid = true;
 
