@@ -47,44 +47,16 @@
       layout = "us";
       xkbOptions = "eurosign:e";
       synaptics.enable = true;
-  # services.xserver.vaapiDrivers = [ pkgs.vaapiIntel ];
-  
   # Enable the KDE Desktop Environment.
   # services.xserver.displayManager.kdm.enable = true;
   # svervices.xserver.desktopManager.kde4.enable = true;
   # services.xserver.desktopManager.xfce.enable = true;  
   # services.xserver.desktopManager.enlightenment.enable = true;
-      windowManager = {
-        xmonad = {
-          enable = true;
-          enableContribAndExtras = true;
-#          extraPackages = haskellPackages: with haskellPackages; [
-#            xmonad-contrib
-#            xmonad-extras
-#            xmonad
-#          ];
-        };
-        default = "xmonad";
-      }; 
       desktopManager.xterm.enable = true;
-      desktopManager.default = "none";
-      # startAgent = true;
+      # desktopManager.default = "none";
       displayManager = {
-          slim = {
-             enable = true;
-             defaultUser = "me";
-          };
       };
-#      sessionCommands = ''
-#        ${pkgs.xlibs.xrdb}/bin/xrdb -merge ~/.Xresources
-#        ${pkgs.xlibs.xsetroot}/bin/xsetroot -cursor_name left_ptr #sets cursor
-#        ${pkgs.feh}/bin/feh --bg-fill ~/wallpapers/windy.jpg
-#        ${pkgs.xcape}/bin/xcape -e "Shift_L=parenleft;Shift_R=parenright"
-#      '';
     };
-
   # services.xserver.desktopManager.e17.enable = true;
-  #   printd.enable = false;
-  #   disks2.enable = true;
     dbus.packages = with pkgs; [ gnome3.dconf ];
  }

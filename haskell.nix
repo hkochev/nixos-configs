@@ -17,13 +17,12 @@ haskellPackages:
                    stylish-haskell 
                    # tools
                    hpack 
-                   hdevtools
+                   # hdevtools
                    ghcid
                    # ghc-mod  
                   
                    # tools
                    stack
                    # stack2nix
- 
                  ]);
 }

@@ -36,11 +36,18 @@
       # dconf for gnome3 UI
       # gnome3.dconf   
     ];
+  
+    programs.git = {
+      enable = true;
+      userName = "Hristo Kochev";
+      userEmail = "h.l.kochev@gmail.com";
+    };
+
 
     programs = {
       chromium.enable = true; 
       bash.enable = true;
-      # dconf.enable = true; # add for gnome programs (opera, firefox etc.)
+      dconf.enable = true; # add for gnome programs (opera, firefox etc.)
 
       vim = {
         enable = true;
@@ -51,5 +58,5 @@
       # Let Home Manager install and manage itself.
       home-manager.enable = true;
     };  
- }; 
+    # }; 
 }

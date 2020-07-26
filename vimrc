@@ -27,9 +27,12 @@ syntax on
   set number              " Show the line numbers on the left side.
   set formatoptions+=o    " Continue comment marker in new lines.
   set textwidth=0         " Hard-wrap long lines as you type them.
+
   set expandtab           " Insert spaces when TAB is pressed.
   set tabstop=2           " Render TABs using this many spaces.
   set shiftwidth=2        " Indentation amount for < and > commands.
+  set softtabstop=2       " Sets the number of columns for a TAB 
+  set smarttab	
 
   set noerrorbells        " No beeps.
   set modeline            " Enable modeline.
@@ -53,7 +56,7 @@ syntax on
   set pastetoggle=        " Use F11 to toggle between paste and nopaste
   set confirm             " Present dialog instead of failing commands
   set mouse=a             " enable mouse
-  set expandtab           " expand tab to spaces
+  
   " Stylish Haaskell settings
   set formatprg=stylish-haskell
   " HLint integration settings
