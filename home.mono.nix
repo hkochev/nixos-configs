@@ -22,9 +22,14 @@
       # stack
       iana-etc
       # dconf for gnome3 UI
-      # gnome3.dconf   
+      # gnome3.dconf
+      # Kube infrastructure
+      # minikube
+      # helm
+      # terraform
+      # aws
   ];
-  
+
   xsession = {
     enable = true;
     windowManager = {
@@ -37,29 +42,40 @@
   };
   
   programs = {
-      chromium.enable = true; 
-      bash.enable = true;
-      # dconf.enable = true; # add for gnome programs (opera, firefox etc.)
-      home-manager.enable = true;
-   
-      git = {
+    chromium.enable = true; 
+    # bash.enable = true;
+    # dconf.enable = true; # add for gnome programs (opera, firefox etc.)
+    home-manager.enable = true;
+    bash = {
+      enable = true;
+      historyControl = ["erasedups"];
+      historyIgnore = [ "ls" "cd" "exit" "nix-shell" ];
+      sessionVariables = { ERL_AFLAGS = "-kernel shell_history enabled"; };
+    };
+    
+    git = {
         enable = true;
         userName = "Hristo Kochev";
         userEmail = "h.l.kochev@gmail.com";
-      };
+    };
 
-      vim = {
+    vim = {
         enable = true;
         extraConfig = builtins.readFile (./vimrc);
-        plugins = import (./vimPlugins.nix);
-      };
+        plugins = import (./vimPlugins.nix) {inherit pkgs;};
+        settings = {
+          history = 1000;
+          background = "dark";
+          number = true;
+          tabstop = 2;
+        };
+    };
 
   # Browsers and Extensions
-  # programs.firefox = {
-  #  enable = true;
-  #  enableIcedTea = true;
-  #  extraPackages = epkgs: [ ];
-  # }; 
-  # Let Home Manager install and manage itself.
+    firefox = {
+      enable = true;
+      # enableIcedTea = true;
+      # extraPackages = epkgs: [ ];
+    }; 
   };
 }

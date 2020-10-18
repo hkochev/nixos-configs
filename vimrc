@@ -67,4 +67,3 @@ syntax on
   "        au FileType haskell nnorremap <buffer> <silent> <F3> :HdevtoolsClear<CR>
   " Elixir mix fomrater option
   set formatprg=mix\ format\ 
-
