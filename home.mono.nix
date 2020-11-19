@@ -17,12 +17,17 @@
       unzip
       htop
       # vim
+      
       opera
       # NOTE: iana-etc is needed by nix-build for stack 
       # stack
       iana-etc
+      
       # dconf for gnome3 UI
       # gnome3.dconf
+
+      docker-compose
+
       # Kube infrastructure
       # minikube
       # helm
@@ -40,12 +45,16 @@
         };
       }; 
   };
-  
+ 
+  # NOTE: disable man pages generation as it is raises error
+  manual.manpages.enable = false;
+ 
   programs = {
     chromium.enable = true; 
-    # bash.enable = true;
+    
     # dconf.enable = true; # add for gnome programs (opera, firefox etc.)
     home-manager.enable = true;
+
     bash = {
       enable = true;
       historyControl = ["erasedups"];

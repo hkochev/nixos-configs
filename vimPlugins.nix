@@ -19,5 +19,4 @@ with pkgs.vimPlugins; [
     vim-stylishask
     vim-elixir
     vim-json
-    # "vim-mix-format"
 ]

@@ -21,9 +21,9 @@
     };  
 
     nat = {
-	enable = true;
+      	enable = true;
         internalInterfaces = ["ve-+"];
-	externalInterface = "enp0s20f0u6";
+	      externalInterface = "enp0s20f0u6";
       };
 
 #    Forwarding for the Ruby VM

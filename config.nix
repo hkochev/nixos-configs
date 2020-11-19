@@ -21,6 +21,7 @@ pkgs : {
           myHaskellEnv
           myVim
           neovim
+          niv
           # ctags
           # rsync
           # firefox

@@ -1,5 +1,6 @@
 haskellPackages: 
-{  haskellEnv = haskellPackages.ghcWithHoogle
+{  
+  haskellEnv = haskellPackages.ghcWithHoogle
                  (haskellPackages: with haskellPackages; [
                    # libraries
                    # arrows async cgi 
@@ -20,9 +21,10 @@ haskellPackages:
                    # hdevtools
                    ghcid
                    # ghc-mod  
-                  
+                   # niv  
                    # tools
-                   stack
+                   # stack
                    # stack2nix
                  ]);
+                 
 }
