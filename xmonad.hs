@@ -25,8 +25,7 @@ import qualified Data.Map        as M
 -- Terminal
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
---
-myTerminal = "urxvt"  --"xterm"   -- "/usr/bin/gnome-terminal"
+myTerminal = "urxvt"
 
 myCodeTerminal = "xterm"    -- I do use xterm as vim viewer
 
@@ -323,7 +322,6 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- you may also bind events to the mouse scroll wheel (button4 and button5)
   ]
 
-
 ------------------------------------------------------------------------
 -- Status bars and logging
 -- Perform an arbitrary action on each internal state change or X event.
@@ -334,7 +332,6 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- > logHook = dynamicLogDzen
 --
 
-
 ------------------------------------------------------------------------
 -- Startup hook
 -- Perform an arbitrary action each time xmonad starts or is restarted
@@ -343,7 +340,6 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 --
 -- By default, do nothing.
 myStartupHook = return ()
-
 
 ------------------------------------------------------------------------
 -- Run xmonad with all the defaults we set up.
@@ -362,7 +358,6 @@ main = do
       , manageHook = manageDocks <+> myManageHook
       , startupHook = setWMName "LG3D"
   }
-
 
 ------------------------------------------------------------------------
 -- Combine it all together
