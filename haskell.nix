@@ -15,9 +15,15 @@ haskellPackages:
                    # test && linters
                    doctest 
                    hlint 
-                   stylish-haskell 
+                   stylish-haskell
+                   # haddock
+                   haskell-language-server      
+                   implicit-hie
+
                    # tools
-                   hpack 
+                   hpack
+                   hasktags
+                   # summoner
                    # hdevtools
                    ghcid
                    # ghc-mod  

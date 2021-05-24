@@ -16,17 +16,23 @@
       # unrar
       unzip
       htop
+      tmux
       # vim
-      
+
+      # nodejs is needed for vim language-server
+      nodejs
+
       opera
       # NOTE: iana-etc is needed by nix-build for stack 
       # stack
-      iana-etc
+      # iana-etc
+      # Activate cachix
+      cachix
       
       # dconf for gnome3 UI
       # gnome3.dconf
 
-      docker-compose
+      # docker-compose
 
       # Kube infrastructure
       # minikube
@@ -34,7 +40,10 @@
       # terraform
       # aws
   ];
+  # Raw configs
+  home.file.".Xresources".source = ./Xresources;  
 
+  # X Sessions
   xsession = {
     enable = true;
     windowManager = {
@@ -42,6 +51,11 @@
           enable = true;
           enableContribAndExtras = true;
           config = ./xmonad.hs;
+          extraPackages =  haskellPackages: [
+            haskellPackages.xmonad-contrib
+            haskellPackages.monad-logger
+            haskellPackages.xmobar
+          ];       
         };
       }; 
   };
@@ -66,6 +80,7 @@
         enable = true;
         userName = "Hristo Kochev";
         userEmail = "h.l.kochev@gmail.com";
+        aliases = { s = "status"; };
     };
 
     vim = {
@@ -82,7 +97,7 @@
 
   # Browsers and Extensions
     firefox = {
-      enable = true;
+      # enable = true;
       # enableIcedTea = true;
       # extraPackages = epkgs: [ ];
     }; 

@@ -19,4 +19,5 @@ with pkgs.vimPlugins; [
     vim-stylishask
     vim-elixir
     vim-json
+    coc-nvim
 ]
