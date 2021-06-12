@@ -12,6 +12,9 @@ haskellPackages:
                    cabal-install
                    cabal2nix
 
+                   # Haskell language server 
+                   ghcup 
+                   
                    # test && linters
                    doctest 
                    hlint 

@@ -16,6 +16,7 @@ pkgs : {
       my = pkgs.buildEnv {
         name = "my";
         paths = [
+          stdenv.cc.cc.lib
           myHaskellEnv
           myVim
           neovim

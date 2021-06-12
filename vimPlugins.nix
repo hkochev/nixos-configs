@@ -18,6 +18,8 @@ with pkgs.vimPlugins; [
     vim-hdevtools
     vim-stylishask
     vim-elixir
+    vim-lsp
+    # vim-lsp-settings
     vim-json
     coc-nvim
 ]
