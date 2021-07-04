@@ -16,8 +16,6 @@
       # unrar
       unzip
       htop
-      tmux
-      # vim
 
       # nodejs is needed for vim language-server
       nodejs
@@ -40,6 +38,7 @@
       # terraform
       # aws
   ];
+
   # Raw configs
   home.file.".Xresources".source = ./Xresources;  
 
@@ -93,6 +92,13 @@
           number = true;
           tabstop = 2;
         };
+    };
+      
+    tmux = {
+      enable = true;
+      clock24 = true;
+      # shortcut = "a";
+      extraConfig = builtins.readFile(./tmux.conf);
     };
 
   # Browsers and Extensions
